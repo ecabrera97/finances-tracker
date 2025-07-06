@@ -51,7 +51,7 @@ router.delete("/:id", async(req, res) => {
                 id: id
             }
         })
-        res.status(204)
+        res.status(204).send()
     } catch (err) {
         res.status(400).json({ error: err.message })
     }

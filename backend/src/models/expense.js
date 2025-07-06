@@ -47,12 +47,15 @@ const ExpenseType = sequelize.define(
         type: {
             type: DataTypes.STRING,
             allowNull: false,
+            primaryKey: true,
             unique: true
         }
     },
     {
         tableName: "expenses_type",
-        timestamps: true
+        timestamps: true,
+        underscored: true,
+        id: false
     }
 )
 
